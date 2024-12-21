@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 :root {
   --background-color: #F5F5DC; /* Beige */
   --primary-color: #D9A5B3; /* Dusty rose */
@@ -47,54 +47,63 @@ body {
   font-size: 2.5rem; /* Ukuran ikon */
 }
 
-.features-carousel {
-    background-color: #f8f9fa; /* Background warna terang */
-    padding: 3rem 0;
-    border-radius: 10px;
-    margin-bottom: 2rem;
+.feature-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+    max-width: 80%;
+    margin: 0 auto;
+    perspective: 1000px; /* Efek 3D */
+    height: 15em;
+    margin-bottom: 20px;
 }
 
-.features-carousel h2 {
-    color: #343a40;
-    font-weight: bold;
+/* Efek Hover */
+.feature-card:hover {
+    transform: scale(1.5) rotateY(5deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.features-carousel .feature-card {
-    padding: 1.5rem;
-    text-align: center;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Atur Animasi Carousel */
+.carousel-inner {
+    transition: transform 0.8s ease-in-out !important;
 }
 
-.features-carousel .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.features-carousel .feature-card i {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: #0d6efd;
-}
-
-.features-carousel .carousel-control-prev-icon,
-.features-carousel .carousel-control-next-icon {
-    background-color: #0d6efd;
-    border-radius: 50%;
-    padding: 10px;
-}
-
-.features-carousel .carousel-control-prev-icon:hover,
-.features-carousel .carousel-control-next-icon:hover {
-    background-color: #0056b3;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
 }
 
 .features-carousel img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: #fff;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon {
+    font-size: 50px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-body {
+    padding: 20px;
 }
 
 footer {
