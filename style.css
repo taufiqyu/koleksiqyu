@@ -16,27 +16,68 @@ body {
   color: var(--text-color)
 }
 
-.offcanvas {
-    background-color: #f8f9fa;
-    color: #343a40;
+.bg-primary {
+  background-color: #d2b48c !important;
 }
 
-.offcanvas-header {
-    border-bottom: 1px solid #dee2e6;
+.btn-primary {
+  background-color: #d2b48c !important;
+  border-color: #d0bca0 !important;
 }
 
-.blockquote {
-    font-size: 0.9rem;
-    font-style: italic;
-    color: #6c757d;
+.btn-primary:hover {
+  background-color: #bca890 !important; /* Opsional: Warna saat hover */
+  border-color: #bca890 !important;
 }
 
-.blockquote-footer {
-  background-color: #f8f9fa;
+.text-primary {
+  color: #d2b48c !important;
 }
 
-.hero {
-  background-color: #f8f9fa;
+button.navbar-toggler {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+button.navbar-toggler:hover, 
+button.navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.offcanvas-body {
+    line-height: 1.6;
+}
+
+.offcanvas-body h5 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #d0bca0;
+}
+
+.offcanvas-body ul {
+    padding-left: 1.5rem;
+}
+
+.offcanvas-body ul li {
+    margin-bottom: 0.5rem;
+}
+
+.offcanvas-body p {
+    margin-bottom: 1rem;
+}
+
+.offcanvas-body {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+}
+
+.offcanvas.show .offcanvas-body {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hero h1 span {
@@ -47,18 +88,43 @@ body {
   font-size: 2.5rem; /* Ukuran ikon */
 }
 
+.carousel-inner img {
+  transition: transform 1.2s ease-in-out;
+}
+
+.carousel-inner img:hover {
+  transform: scale(1.05); /* Zoom efek */
+}
+
 .feature-card {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
-    background-color: #fff;
+    background: linear-gradient(135deg, #f8f4e1, #e4d4c8, #d9c3b6); /* Warna terang kalem */
+    background-size: 200% 200%; /* Untuk animasi pulse */
+    animation: pulse-gradient 6s infinite; /* Animasi pulse */
     max-width: 80%;
     margin: 0 auto;
     perspective: 1000px; /* Efek 3D */
     height: 15em;
     margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animasi pulse gradient */
+@keyframes pulse-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Efek Hover */
@@ -66,6 +132,8 @@ body {
     transform: scale(1.05) rotateY(5deg);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+
 
 /* Atur Animasi Carousel */
 .carousel-inner {
@@ -75,6 +143,7 @@ body {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(100%);
+    opacity: 20%;
 }
 
 .features-carousel img {
@@ -83,14 +152,190 @@ body {
     border-radius: 10px;
 }
 
-.bg-gradient-primary {
-    background: linear-gradient(135deg, #007bff, #6610f2);
-    color: #fff;
+/* Paket Basic */
+.bg-gradient-basic {
+    background: linear-gradient(135deg, #d1e8e2, #92c6c3); /* Hijau pastel lembut */
+    color: #2b2d42;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden; /* Mencegah efek shimmer keluar area elemen */
 }
 
-.card:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
+/* Efek shimmer */
+.bg-gradient-basic::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-30deg);
+    animation: shimmer 3s infinite;
+    z-index: 1; /* Pastikan shimmer berada di atas */
+}
+
+/* Animasi shimmer */
+@keyframes shimmer {
+    from {
+        transform: translateX(-150%);
+    }
+    to {
+        transform: translateX(150%);
+    }
+}
+
+/* Pastikan konten tetap terlihat di atas shimmer */
+.bg-gradient-basic > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Tombol Basic */
+.btn-basic {
+    background-color: #92c6c3;
+    color: #2b2d42;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.btn-basic:hover {
+    background-color: #76b0a8;
+    cursor: pointer;
+}
+
+/* Paket Premium */
+.bg-gradient-premium {
+    background: linear-gradient(135deg, #f0e5cf, #d4a373); /* Emas lembut */
+    color: #5a3e2b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden; /* Agar shimmer tidak keluar area elemen */
+}
+
+/* Efek shimmer */
+.bg-gradient-premium::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-30deg);
+    animation: shimmer 3s infinite;
+    z-index: 1;
+}
+
+/* Animasi shimmer */
+@keyframes shimmer {
+    from {
+        transform: translateX(-150%);
+    }
+    to {
+        transform: translateX(150%);
+    }
+}
+
+/* Pastikan konten tetap di atas shimmer */
+.bg-gradient-premium > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Tombol Premium */
+.btn-premium {
+    background-color: #d4a373;
+    color: #5a3e2b;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.btn-premium:hover {
+    background-color: #b68659;
+    cursor: pointer;
+}
+
+/* Paket Eksklusif */
+.bg-gradient-exclusive {
+    background: linear-gradient(135deg, #2d2f36, #495057); /* Hitam keabu-abuan */
+    color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden; /* Agar shimmer tetap di dalam area elemen */
+}
+
+/* Efek shimmer */
+.bg-gradient-exclusive::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-30deg);
+    animation: shimmer 2.5s infinite;
+    z-index: 1; /* Letakkan shimmer di atas gradien */
+}
+
+/* Animasi shimmer */
+@keyframes shimmer {
+    from {
+        transform: translateX(-150%);
+    }
+    to {
+        transform: translateX(150%);
+    }
+}
+
+/* Pastikan konten tetap di atas shimmer */
+.bg-gradient-exclusive > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Tombol Eksklusif */
+.btn-exclusive {
+    background-color: #495057;
+    color: #f8f9fa;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.btn-exclusive:hover {
+    background-color: #343a40;
+    cursor: pointer;
 }
 
 .icon {
@@ -98,33 +343,28 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease-in-out;
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: #007bff; /* Warna border berubah saat hover */
 }
 
 .card-body {
     padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-footer {
-    background-color: #007bff; /* Warna biru sesuai tema */
-    color: #f8f9fa;
-}
-
-footer h5, footer h3 {
-    color: #ffffff;
-}
-
-footer a {
-    color: #f8f9fa;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #ffc107; /* Warna hover */
-    text-decoration: underline;
-}
-
-footer hr {
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
-}
+.card-gradient {
+      background: linear-gradient(135deg, #f5f5dc, #e6d8c3); /* Gradasi warna beige */
+      color: #333;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-copy {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      border: none;
+    }
+    .btn-copy:focus {
+      outline: none;
+    }
