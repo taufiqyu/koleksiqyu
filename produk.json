@@ -1,0 +1,142 @@
+[
+    {
+        "nama": "Elegant Midnight",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo1",
+        "tag": "Terbaru",
+        "kategori": "spesial"
+    },
+    {
+        "nama": "Golden Night",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo2",
+        "tag": "Terlaris",
+        "kategori": "luxury"
+    },
+    {
+        "nama": "Mystic Romance",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo3",
+        "tag": "",
+        "kategori": "floral"
+    },
+    {
+        "nama": "Celestial Dream",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo4",
+        "tag": "Terbaru",
+        "kategori": "simpel"
+    },
+    {
+        "nama": "Luminous Twilight",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo5",
+        "tag": "Eksklusif",
+        "kategori": "elegant"
+    },
+    {
+        "nama": "Royal Velvet",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo6",
+        "tag": "Terlaris",
+        "kategori": "luxury"
+    },
+    {
+        "nama": "Silent Whisper",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo7",
+        "tag": "",
+        "kategori": "simpel"
+    },
+    {
+        "nama": "Mystical Aura",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo8",
+        "tag": "Terbaru",
+        "kategori": "floral"
+    },
+    {
+        "nama": "Opal Mirage",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo9",
+        "tag": "Eksklusif",
+        "kategori": "luxury"
+    },
+    {
+        "nama": "Enchanted Forest",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo10",
+        "tag": "",
+        "kategori": "spesial"
+    },
+    {
+        "nama": "Serenity Blaze",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo11",
+        "tag": "Terlaris",
+        "kategori": "simpel"
+    },
+    {
+        "nama": "Golden Horizon",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo12",
+        "tag": "Eksklusif",
+        "kategori": "luxury"
+    },
+    {
+        "nama": "Twilight Veil",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo13",
+        "tag": "",
+        "kategori": "floral"
+    },
+    {
+        "nama": "Dreamy Waves",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo14",
+        "tag": "Terbaru",
+        "kategori": "simpel"
+    },
+    {
+        "nama": "Midnight Sparkle",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo15",
+        "tag": "Terlaris",
+        "kategori": "luxury"
+    },
+    {
+        "nama": "Frosted Bliss",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "/spesial%20001%20almond%20green/index.html",
+        "tag": "",
+        "kategori": "spesial"
+    },
+    {
+        "nama": "Eternal Love",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo17",
+        "tag": "Eksklusif",
+        "kategori": "floral"
+    },
+    {
+        "nama": "Crystal Glow",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo18",
+        "tag": "Terbaru",
+        "kategori": "luxury"
+    },
+    {
+        "nama": "Celestial Bloom",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo19",
+        "tag": "",
+        "kategori": "simpel"
+    },
+    {
+        "nama": "Starlight Serenade",
+        "gambar": "https://via.placeholder.com/180x320",
+        "url": "https://example.com/demo20",
+        "tag": "Terlaris",
+        "kategori": "floral"
+    }
+]
