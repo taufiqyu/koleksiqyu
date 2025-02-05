@@ -93,12 +93,19 @@
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 1;
-            transition: opacity 0.3s ease;
+            background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0));
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 0.5s ease, transform 0.2s ease;
             display: flex;
             flex-direction: column;
             justify-content: end;
             align-items: center;
+        }
+
+        .card:hover .card-overlay {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .badge {
@@ -309,12 +316,12 @@
                                 <img src="${produk.gambar}" alt="${produk.nama}">
                                 ${tagHTML}
                                 <div class="card-overlay">
-                                    <h5 class="card-title">${produk.nama}</h5>
+                                    <h5 class="card-title text-light">${produk.nama}</h5>
                                     <div class="d-flex gap-2 mb-3">
-                                        <a href="${produk.url}" target="_blank" class="btn btn-sm btn-outline-dark">
+                                        <a href="${produk.url}" target="_blank" class="btn btn-sm btn-light">
                                             <i class="fa-regular fa-eye"></i> Lihat
                                         </a>
-                                        <a href="${waLink}" class="btn btn-sm btn-outline-success">
+                                        <a href="${waLink}" class="btn btn-sm btn-success">
                                             <i class="fa-brands fa-whatsapp"></i> Pesan
                                         </a>
                                     </div>
