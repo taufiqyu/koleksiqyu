@@ -89,8 +89,8 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const defaultGift = {
-        bank1: "images/bank/bca.png",
-        bank2: "images/bank/bri.png",
+        bank1: "../dist/images/bank/bca.png",
+        bank2: "../dist/images/bank/bri.png",
         norek1: "123456789099",
         norek2: "098765432199",
         atasNama1: "Uzumaki Naruto",
