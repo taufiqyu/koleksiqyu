@@ -1,77 +1,70 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KoleksiQyu - Undangan Digital Minimalis</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/dist/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/dist/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/dist/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/dist/favicon/site.webmanifest">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aquawolf04/font-awesome-pro@5cd1511/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright&amp;family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet">
     <style>
         :root {
-            --utama: #2d2d2d;
-            --aksen: #c0a878;
-            --teks: #4a4a4a;
+            --utama: #0a192f;
+            --aksen: #2ecc71;
+            --teks: #ffffff;
+            --gradient: linear-gradient(135deg, #0a192f 0%, #1a365f 100%);
         }
 
         body {
-            background: #ffffff;
+            background: #f9f9f9;
+            color: #333;
             font-family: 'Poppins', sans-serif;
-            color: var(--teks);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
 
         .hero-section {
-            padding: 5rem 0 3rem;
-            background: #f9f9f9;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid #eeeeee;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+            background-color: #e3ebf2;
+            background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M81.28 88H68.413l19.298 19.298L81.28 88zm2.107 0h13.226L90 107.838 83.387 88zm15.334 0h12.866l-19.298 19.298L98.72 88zm-32.927-2.207L73.586 78h32.827l.5.5 7.294 7.293L115.414 87l-24.707 24.707-.707.707L64.586 87l1.207-1.207zm2.62.207L74 80.414 79.586 86H68.414zm16 0L90 80.414 95.586 86H84.414zm16 0L106 80.414 111.586 86h-11.172zm-8-6h11.173L98 85.586 92.414 80zM82 85.586L87.586 80H76.414L82 85.586zM17.414 0L.707 16.707 0 17.414V0h17.414zM4.28 0L0 12.838V0h4.28zm10.306 0L2.288 12.298 6.388 0h8.198zM180 17.414L162.586 0H180v17.414zM165.414 0l12.298 12.298L173.612 0h-8.198zM180 12.838L175.72 0H180v12.838zM0 163h16.413l.5.5 7.294 7.293L25.414 172l-8 8H0v-17zm0 10h6.613l-2.334 7H0v-7zm14.586 7l7-7H8.72l-2.333 7h8.2zM0 165.414L5.586 171H0v-5.586zM10.414 171L16 165.414 21.586 171H10.414zm-8-6h11.172L8 170.586 2.414 165zM180 163h-16.413l-7.794 7.793-1.207 1.207 8 8H180v-17zm-14.586 17l-7-7h12.865l2.333 7h-8.2zM180 173h-6.613l2.334 7H180v-7zm-21.586-2l5.586-5.586 5.586 5.586h-11.172zM180 165.414L174.414 171H180v-5.586zm-8 5.172l5.586-5.586h-11.172l5.586 5.586zM152.933 25.653l1.414 1.414-33.94 33.942-1.416-1.416 33.943-33.94zm1.414 127.28l-1.414 1.414-33.942-33.94 1.416-1.416 33.94 33.943zm-127.28 1.414l-1.414-1.414 33.94-33.942 1.416 1.416-33.943 33.94zm-1.414-127.28l1.414-1.414 33.942 33.94-1.416 1.416-33.94-33.943zM0 85c2.21 0 4 1.79 4 4s-1.79 4-4 4v-8zm180 0c-2.21 0-4 1.79-4 4s1.79 4 4 4v-8zM94 0c0 2.21-1.79 4-4 4s-4-1.79-4-4h8zm0 180c0-2.21-1.79-4-4-4s-4 1.79-4 4h8z' fill='%239C92AC' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
         }
 
         .hero-title {
-            font-family: 'Cormorant Upright', serif;
-            font-size: 2.8rem;
-            font-weight: 600;
-            color: var(--utama);
-            position: relative;
-            padding-bottom: 1rem;
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .hero-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 2px;
-            background: var(--aksen);
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
+        .hero-text {
+            font-size: 1.25rem;
             max-width: 600px;
-            margin: 1rem auto 2rem;
-            color: #666;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background-color: var(--utama);
+            padding: 0.5rem 0;
         }
 
-        .filter-btn {
-            border: 1px solid #ddd;
-            color: #666;
-            padding: 0.5rem 1.5rem;
-            margin: 0 0.5rem 1rem;
-            border-radius: 25px;
-            background: transparent;
-            transition: all 0.2s ease;
-        }
-
-        .filter-btn.active,
-        .filter-btn:hover {
-            border-color: var(--aksen);
-            color: var(--aksen);
-            background: rgba(192, 168, 120, 0.05);
+        .navbar-brand,
+        .navbar-brand:hover {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 2px;
         }
 
         .card {
@@ -100,12 +93,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.5);
             opacity: 0;
             transition: opacity 0.3s ease;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: end;
             align-items: center;
         }
 
@@ -114,7 +107,7 @@
         }
 
         .badge {
-            background: var(--aksen);
+            background: #e67e22;
             color: white;
             font-weight: 500;
             padding: 0.4rem 1rem;
@@ -123,40 +116,49 @@
             top: 1rem;
             right: 1rem;
         }
+        
+        .filter-btn {
+            color: var(--utama);
+            background: transparent;
+            border: none;
+            padding: 10px 18px;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s ease-in-out;
+        }
 
-        .modal-content {
-            border: 1px solid #eee;
-            border-radius: 12px;
-            overflow: hidden;
+        .filter-btn::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: transparent;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            color: #fff;
+        }
+
+        .filter-btn:hover::after,
+        .filter-btn.active::after {
+            background: var(--aksen);
         }
         
-        .modal-body {
-            padding: 0;
-        }
-
-        .iframe-container {
-            width: 100%;
-            aspect-ratio: 9 / 16;
-        }
-
-        .iframe-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .btn-close {
-            filter: invert(0.5);
-        }
-
+        
         footer {
-            background: #f9f9f9;
+            background: var(--utama);
             margin-top: auto;
             border-top: 1px solid #eee;
+            color: #fff;
         }
 
         .social-icon {
-            color: #666;
+            color: var(--aksen);
             transition: color 0.2s ease;
         }
 
@@ -168,7 +170,7 @@
             .hero-title {
                 font-size: 2rem;
             }
-            
+
             .filter-btn {
                 margin: 0.25rem;
                 padding: 0.4rem 1rem;
@@ -177,108 +179,134 @@
         }
     </style>
 </head>
-<body>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" zoomAndPan="magnify" viewBox="0 0 375 375" height="20" preserveAspectRatio="xMidYMid meet" xmlns:v="https://vecta.io/nano"><style><![CDATA[.B{clip-rule:nonzero}.C{fill-rule:evenodd}]]></style><defs><clipPath id="A"><path d="M0 4.09h203V194H0zm0 0" class="B"/></clipPath><clipPath id="B"><path d="M13 5h339v365.84H13zm0 0" class="B"/></clipPath><clipPath id="C"><path d="M159 199h216v171.84H159zm0 0" class="B"/></clipPath><clipPath id="D"><path d="M0 274.586h53.625v96H0zm0 0" class="B"/></clipPath></defs><g clip-path="url(#A)" class="C"><path fill="#fff" d="M52.254 144.895c14.496-45.246 51.848-80.258 98.461-91.469L202.84 5.008c-6.547-.715-13.199-1.078-19.93-1.078C81.906 3.93.043 85.785.043 186.797a177.39 177.39 0 0 0 .113 6.469l18.59-17.234zm0 0"/></g><g clip-path="url(#B)" class="C"><path fill="#fff" d="M99.566 239.25l170.52-158.367 33.707-31.305 47.785-44.379h-87.59l-12.805 11.895-38.508 35.77L47.164 206.629l-33.625 31.18 133.285 133.277h84.578l-47.137-47.129zm0 0"/></g><g clip-path="url(#C)" class="C"><path fill="#fff" d="M203.504 199.633l-43.773 40.738 19.238 19.305 111.418 111.41h84.578l-58.922-58.914zm0 0"/></g><path fill="#fff" d="M297.926 112.016c14.008 21.508 22.152 47.191 22.152 74.773 0 21.016-4.727 40.934-13.18 58.738l33.789 33.777c15.945-27.133 25.09-58.758 25.09-92.516 0-39.609-12.59-76.281-33.992-106.227zm0 0" class="C"/><g clip-path="url(#D)"><path fill="#ff66c4" d="M.094 274.586l94.887 96.301H.094zm0 0"/></g></svg>
+          <p class="navbar-brand m-0">KOLEKSIQYU</p>
+          <a href="https://wa.me/6285645251595" class="social-icon fs-3"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </nav>
+
     <header class="hero-section">
-        <div class="container text-center">
-            <h1 class="hero-title text-uppercase">Koleksiqyu</h1>
-            <p class="section-subtitle">Desain Undangan Digital Minimalis nan Elegan</p>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start hero-content">
+                    <h1 class="hero-title">
+                        Momen Berharga dalam Sentuhan Digital
+                    </h1>
+                    <p class="hero-text mb-4">
+                        Hadirkan kemewahan dalam setiap undangan digital Anda. Desain eksklusif yang memadukan elegan modern dengan sentuhan personal.
+                    </p>
+                    <div>
+                      <a href="https://wa.me/6285645251595?text=Halo,%20saya%20ingin%20memesan%20undangan%20digital." class="btn btn-light shadow">Pesan Sekarang</a>
+                      <a href="https://wa.me/6285645251595?text=Halo,%20saya%20ingin%20bertanya%20tentang%20undangan%20digital." class="btn btn-success shadow">Konsultasi Gratis</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="hero-image" style="position: relative; transform: rotate(3deg)">
+                        <div class="mockup-wrapper" style="transform: perspective(2000px) rotateY(-20deg)">
+                            <img src="https://example.com/hero-mockup.png" alt="Undangan Preview" style="border-radius: 20px; box-shadow: 0 25px 50px rgba(0,0,0,0.3)" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
     <main class="container mb-5">
-        <div class="text-center mb-4">
-            <div class="btn-group flex-wrap justify-content-center">
-                <button class="btn filter-btn active" data-filter="*">All</button>
-                <button class="btn filter-btn" data-filter=".spesial">Spesial</button>
-                <button class="btn filter-btn" data-filter=".luxury">Luxury</button>
-                <button class="btn filter-btn" data-filter=".floral">Floral</button>
-                <button class="btn filter-btn" data-filter=".simpel">Simpel</button>
+        <div class="text-center py-4">
+            <div>
+                <button class="btn btn-outline-dark filter-btn active" data-filter=".spesial">Spesial</button>
+                <button class="btn btn-outline-dark filter-btn" data-filter=".luxury">Luxury</button>
+                <button class="btn btn-outline-dark filter-btn" data-filter=".floral">Floral</button>
+                <button class="btn btn-outline-dark filter-btn" data-filter=".simpel">Simpel</button>
             </div>
         </div>
 
-        <div class="row g-3" id="produk-list"></div>
+        <div class="row g-3" id="produk-list" style="min-height:50vh"></div>
     </main>
-
-    <!-- Modal -->
-    <div class="modal fade" id="previewModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="iframe-container">
-                    <iframe id="previewFrame"></iframe>
-                </div>
-                <div class="modal-footer justify-content-center border-0 bg-dark-subtle">
-                  <button type="button" class="btn btn-sm btn-light px-4" data-bs-dismiss="modal">
-                    <i class="text-danger bi bi-x-circle-fill me-2"></i>Tutup
-                  </button>
-                    <a href="" id="waButton" class="btn btn-sm btn-light px-4">
-                        <i class="text-success bi bi-whatsapp me-2"></i>Pesan
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer class="footer py-5">
         <div class="container">
             <div class="row mx-0 g-5">
-                <div class="col-lg-4">
-                    <h5 class="mb-3">KOLEKSIQYU</h5>
-                    <p class="text-muted small">Menyederhanakan momen berharga dengan desain yang timeless</p>
+                <div class="col-lg-6 text-center text-lg-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="90" zoomAndPan="magnify" viewBox="0 0 375 375" height="90" preserveAspectRatio="xMidYMid meet" xmlns:v="https://vecta.io/nano"><style><![CDATA[.B{clip-rule:nonzero}.C{fill-rule:evenodd}]]></style><defs><clipPath id="A"><path d="M0 4.09h203V194H0zm0 0" class="B"/></clipPath><clipPath id="B"><path d="M13 5h339v365.84H13zm0 0" class="B"/></clipPath><clipPath id="C"><path d="M159 199h216v171.84H159zm0 0" class="B"/></clipPath><clipPath id="D"><path d="M0 274.586h53.625v96H0zm0 0" class="B"/></clipPath></defs><g clip-path="url(#A)" class="C"><path fill="#fff" d="M52.254 144.895c14.496-45.246 51.848-80.258 98.461-91.469L202.84 5.008c-6.547-.715-13.199-1.078-19.93-1.078C81.906 3.93.043 85.785.043 186.797a177.39 177.39 0 0 0 .113 6.469l18.59-17.234zm0 0"/></g><g clip-path="url(#B)" class="C"><path fill="#fff" d="M99.566 239.25l170.52-158.367 33.707-31.305 47.785-44.379h-87.59l-12.805 11.895-38.508 35.77L47.164 206.629l-33.625 31.18 133.285 133.277h84.578l-47.137-47.129zm0 0"/></g><g clip-path="url(#C)" class="C"><path fill="#fff" d="M203.504 199.633l-43.773 40.738 19.238 19.305 111.418 111.41h84.578l-58.922-58.914zm0 0"/></g><path fill="#fff" d="M297.926 112.016c14.008 21.508 22.152 47.191 22.152 74.773 0 21.016-4.727 40.934-13.18 58.738l33.789 33.777c15.945-27.133 25.09-58.758 25.09-92.516 0-39.609-12.59-76.281-33.992-106.227zm0 0" class="C"/><g clip-path="url(#D)"><path fill="#ff66c4" d="M.094 274.586l94.887 96.301H.094zm0 0"/></g></svg>
+                    <h5 class="my-3 fw-bold">KOLEKSIQYU</h5>
+                    <p class="small">Menyederhanakan momen berharga dengan desain yang timeless</p>
                 </div>
-                
-                <div class="col-lg-4">
-                    <h5 class="mb-3">Kontak</h5>
-                    <ul class="list-unstyled small">
-                        <li class="mb-2">
-                            <a class="text-decoration-none text-dark" href="https://wa.me/6285645251595">
-                                <i class="bi bi-whatsapp me-2"></i>+62 856-4525-1595
-                            </a>
-                        </li>
-                        <li>
-                            <a class="text-decoration-none text-dark" href="mailto:koleksiqyu@gmail.com">
-                                <i class="bi bi-envelope me-2"></i>koleksiqyu@gmail.com
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-4">
-                    <h5 class="mb-3">Sosial Media</h5>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="social-icon"><i class="bi bi-instagram fs-5"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-facebook fs-5"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-tiktok fs-5"></i></a>
+
+                <div class="col-lg-6 text-center text-lg-end">
+                    <h5 class="mb-3 fw-bold">Ikuti Kami</h5>
+                    <div class="d-flex justify-content-center justify-content-lg-end gap-4">
+                        <a href="https://www.instagram.com/taufiqyu14?igsh=cWo5NHlzdTB0dmM1" class="social-icon fs-3"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1A7qpwfQL2/" class="social-icon fs-3"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@koleksiqyu.site?_t=ZS-8teZNhYMf0J&_r=1" class="social-icon fs-3"><i class="fa-brands fa-tiktok"></i></a>
                     </div>
                 </div>
             </div>
-            
+
             <hr class="my-5">
-            
-            <div class="text-center small text-muted">
+
+            <div class="text-center small">
                 <p class="mb-0">&copy; <span id="year"></span> KoleksiQyu. All rights reserved</p>
                 <script>
-                document.getElementById("year").textContent = new Date().getFullYear();
+                    document.getElementById("year").textContent = new Date().getFullYear();
                 </script>
             </div>
         </div>
     </footer>
 
-    <!-- Script tetap sama seperti sebelumnya -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const nomorWA = "6285645251595";
-        const waButton = document.getElementById("waButton");
-        const produkList = document.getElementById("produk-list");
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        /* Init typed.js */
+        const selectTyped = document.querySelector('.typed');
+        if (selectTyped) {
+          let typed_strings = selectTyped.getAttribute('data-typed-items');
+          typed_strings = typed_strings.split(',');
+          new Typed('.typed', {
+            strings: typed_strings,
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 50,
+            backDelay: 2000
+          });
+        }
 
-        fetch("produk.json")
-            .then(response => response.json())
-            .then(data => {
-                produkList.innerHTML = "";
+        document.addEventListener("DOMContentLoaded", async () => {
+            const nomorWA = "6285645251595";
+            const produkList = document.getElementById("produk-list");
+
+            try {
+                const response = await fetch("produk.json");
+                const data = await response.json();
+                produkList.innerHTML = ""; // Reset konten produk list
+
+                // Menentukan ikon badge berdasarkan tag
+                const getBadgeIcon = (tag) => {
+                    switch (tag.toLowerCase()) {
+                        case 'terbaru':
+                            return '<i class="fa-regular fa-fire"></i>';
+                        case 'terlaris':
+                            return '<i class="fa-solid fa-bolt"></i>';
+                        case 'eksklusif':
+                            return '<i class="fa-solid fa-stars"></i>';
+                        default:
+                            return '';
+                    }
+                };
 
                 data.forEach(produk => {
-                    let tagHTML = produk.tag ? `<span class="badge">${produk.tag}</span>` : "";
+                    let tagHTML = produk.tag ? `
+                        <span class="badge">
+                            ${getBadgeIcon(produk.tag)} ${produk.tag}
+                        </span>` : "";
+
+                    const pesanWA = `Halo, saya ingin memesan *${produk.nama}*.`;
+                    const waLink = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesanWA)}`;
 
                     let cardHTML = `
                         <div class="col-6 col-md-3 isotope-item ${produk.kategori}">
@@ -287,10 +315,14 @@
                                 ${tagHTML}
                                 <div class="card-overlay">
                                     <h5 class="card-title">${produk.nama}</h5>
-                                    <button class="btn btn-sm btn-outline-dark btn-preview" data-bs-toggle="modal" data-bs-target="#previewModal" 
-                                        data-url="${produk.url}" data-nama="${produk.nama}">
-                                        <i class="bi bi-eye"></i> Lihat
-                                    </button>
+                                    <div class="d-flex gap-2 mb-3">
+                                        <a href="${produk.url}" target="_blank" class="btn btn-sm btn-outline-dark">
+                                            <i class="fa-regular fa-eye"></i> Lihat
+                                        </a>
+                                        <a href="${waLink}" class="btn btn-sm btn-outline-success">
+                                            <i class="fa-brands fa-whatsapp"></i> Pesan
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -303,6 +335,10 @@
                     itemSelector: ".isotope-item"
                 });
 
+                // Set default filter ke kategori pertama
+                let defaultFilter = document.querySelector(".filter-btn").getAttribute("data-filter");
+                iso.arrange({ filter: defaultFilter });
+
                 // Filter saat tombol diklik
                 document.querySelectorAll(".filter-btn").forEach(button => {
                     button.addEventListener("click", function () {
@@ -310,37 +346,42 @@
                         iso.arrange({ filter: filterValue });
                     });
                 });
-                
+
                 document.querySelectorAll('.filter-btn').forEach(btn => {
-                  btn.addEventListener('click', function() {
-                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                  });
-                });
-
-                // Event listener untuk tombol "Lihat"
-                document.querySelectorAll(".btn-preview").forEach(button => {
-                    button.addEventListener("click", function () {
-                        const url = this.getAttribute("data-url");
-                        const namaProduk = this.getAttribute("data-nama");
-
-                        document.getElementById("previewFrame").src = url;
-                        let pesanWA = `Halo, saya ingin memesan *${namaProduk}*.`;
-                        waButton.href = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesanWA)}`;
+                    btn.addEventListener('click', function () {
+                        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
                     });
                 });
-            })
-            .catch(error => console.error("Gagal memuat produk:", error));
-            
-            const previewModal = document.getElementById('previewModal');
-            previewModal.addEventListener('hidden.bs.modal', function () {
-              const iframe = document.getElementById('previewFrame');
-              iframe.src = 'about:blank';
-              const newIframe = iframe.cloneNode(false);
-              iframe.parentNode.replaceChild(newIframe, iframe);
-            });
-    });
-</script>
+            } catch (error) {
+                console.error("Gagal memuat produk:", error);
+            }
+        });
 
+        document.addEventListener("click", function (event) {
+            let navbar = document.querySelector(".navbar-collapse");
+            let toggler = document.querySelector(".navbar-toggler");
+
+            if (!navbar.contains(event.target) && !toggler.contains(event.target)) {
+                navbar.classList.remove("show");
+            }
+        });
+
+        // Smooth scroll with history prevention
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Update URL without adding to history
+                    history.replaceState(null, null, ' ');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
