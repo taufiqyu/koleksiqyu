@@ -4,6 +4,64 @@ $(window).on('load', function() { // makes sure the whole site is loaded
   $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
 });
 
+//overlay
+document.addEventListener("DOMContentLoaded", function () {
+    // Tambahkan Bootstrap jika belum ada
+    let bootstrapCDN = document.createElement("link");
+    bootstrapCDN.rel = "stylesheet";
+    bootstrapCDN.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css";
+    document.head.appendChild(bootstrapCDN);
+
+    // Buat elemen overlay
+    let overlay = document.createElement("div");
+    overlay.id = "overlayPromo";
+    overlay.className = "d-flex justify-content-center align-items-center p-2";
+    overlay.innerHTML = `
+        <div class="container text-center">
+            <p class="mb-2 text-white fw-bold">Ingin undangan digital seperti ini? Yuk, konsultasi dulu dengan kami!</p>
+            <div class="d-flex gap-2 justify-content-center">
+                <a href="https://wa.me/085645251595?text=Halo%20saya%20tertarik%20dengan%20undangan%20digital" target="_blank" class="btn btn-success btn-sm">
+                    <i class="fa-brands fa-whatsapp me-1"></i> Pesan Sekarang
+                </a>
+                <a href="https://wa.me/085645251595?text=Halo,%20saya%20ingin%20tanya%20tentang%20undangan%20digital" target="_blank" class="btn btn-outline-light btn-sm">
+                    <i class="fa-brands fa-whatsapp me-1"></i> Tanya Dulu
+                </a>
+            </div>
+            <span id="tutupOverlay" class="position-absolute top-0 end-0 m-2 fs-5 text-white" style="cursor:pointer;">&times;</span>
+        </div>
+    `;
+
+    // Tambahkan overlay ke dalam body
+    document.body.appendChild(overlay);
+
+    // Tambahkan CSS ke dalam <style>
+    let style = document.createElement("style");
+    style.innerHTML = `
+        #overlayPromo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            z-index: 9999;
+        }
+        
+        @media (max-width: 576px) {
+            #overlayPromo .d-flex {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Tambahkan event listener ke tombol tutup
+    document.getElementById("tutupOverlay").addEventListener("click", function () {
+        overlay.style.display = "none";
+    });
+});
+
 // nama tamu berdasarkan url 
 document.addEventListener("DOMContentLoaded", function () {
     // Ambil parameter "tamu" dari URL
