@@ -1,8 +1,8 @@
 [
     {
         "nama": "Elegant Midnight",
-        "gambar": "https://via.placeholder.com/180x320",
-        "url": "https://example.com/demo1",
+        "gambar": "/dist/coming-soon.webp",
+        "url": "coming-soon.html",
         "tag": "Terbaru",
         "kategori": "spesial"
     },
