@@ -15,19 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Buat elemen overlay
     let overlay = document.createElement("div");
     overlay.id = "overlayPromo";
-    overlay.className = "d-flex justify-content-center align-items-center p-2";
     overlay.innerHTML = `
-        <div class="container text-center">
+        <div class="overlay-content text-center position-relative p-3">
             <p class="mb-2 text-white fw-bold">Ingin undangan digital seperti ini? Yuk, konsultasi dulu dengan kami!</p>
             <div class="d-flex gap-2 justify-content-center">
-                <a href="https://wa.me/085645251595?text=Halo%20saya%20tertarik%20dengan%20undangan%20digital" target="_blank" class="btn btn-success btn-sm">
+                <a href="https://wa.me/085645251595?text=Halo%20saya%20tertarik%20dengan%20undangan%20digital" target="_blank" class="btn btn-success btn-sm w-100">
                     <i class="fa-brands fa-whatsapp me-1"></i> Pesan Sekarang
                 </a>
-                <a href="https://wa.me/085645251595?text=Halo,%20saya%20ingin%20tanya%20tentang%20undangan%20digital" target="_blank" class="btn btn-outline-light btn-sm">
+                <a href="https://wa.me/085645251595?text=Halo,%20saya%20ingin%20tanya%20tentang%20undangan%20digital" target="_blank" class="btn btn-outline-light btn-sm w-100">
                     <i class="fa-brands fa-whatsapp me-1"></i> Tanya Dulu
                 </a>
             </div>
-            <span id="tutupOverlay" class="position-absolute top-0 end-0 m-2 fs-5 text-white" style="cursor:pointer;">&times;</span>
+            <button id="tutupOverlay" class="btn btn-close btn-light position-absolute"></button>
         </div>
     `;
 
@@ -40,17 +39,49 @@ document.addEventListener("DOMContentLoaded", function () {
         #overlayPromo {
             position: fixed;
             top: 0;
-            left: 0;
+            left: 50%;
+            transform: translateX(-50%);
             width: 100%;
-            background: rgba(0, 0, 0, 0.85);
+            max-width: 480px;
+            background: rgba(0, 0, 0, 0.9);
             color: white;
             z-index: 9999;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
-        
-        @media (max-width: 576px) {
-            #overlayPromo .d-flex {
+
+        .overlay-content {
+            position: relative;
+            padding: 12px;
+        }
+
+        #overlayPromo button {
+            padding: 8px 12px;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+
+        #tutupOverlay {
+            top: 5px;
+            right: 10px;
+        }
+
+        @media (max-width: 600px) {
+            #overlayPromo {
+                width: 100%;
+                left: 0;
+                transform: none;
+                border-radius: 0;
+            }
+            .d-flex {
                 flex-direction: column;
-                gap: 5px;
+                gap: 8px;
+            }
+            #tutupOverlay {
+                top: -12px;
+                right: 5px;
+                background: white;
+                border-radius: 50%;
             }
         }
     `;
