@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Special 007 : Blush Peach</title>
+    <meta content="KoleksiQyu Team" name="author">
+	  <meta content="KoleksiQyu menyediakan layanan undangan digital elegan dengan desain yang dapat disesuaikan untuk acara pernikahan Anda. Temukan berbagai pilihan template undangan dan buat momen pernikahan Anda lebih istimewa." name="description"> 
+  	<meta content="undangan digital, template undangan, desain pernikahan, koleksi undangan, undangan pernikahan elegan, undangan online, KoleksiQyu" name="keywords">
+    <link rel="apple-touch-icon" sizes="180x180" href="../dist/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../dist/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../dist/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../dist/images/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aquawolf04/font-awesome-pro@5cd1511/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&amp;family=Cormorant+Upright:wght@300;400;500;600;700&amp;family=Lora:ital,wght@0,400..700;1,400..700&amp;family=Stalemate&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/style/aos.css">
+    <link rel="stylesheet" href="../dist/style/default.min.css">
+		<link rel="stylesheet" href="style.css">
+  </head>
+  <body class="no-scroll" onload="window.scrollTo(0, 0)">
+  	<!-- Preloader -->
+		<div id="preloader">
+  		<div id="status" class="text-utama"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="currentColor" stroke="currentColor" stroke-width="7" r="15" cx="40" cy="100"><animate attributeName="opacity" calcMode="spline" dur="1.2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="currentColor" stroke="currentColor" stroke-width="7" r="15" cx="100" cy="100"><animate attributeName="opacity" calcMode="spline" dur="1.2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="currentColor" stroke="currentColor" stroke-width="7" r="15" cx="160" cy="100"><animate attributeName="opacity" calcMode="spline" dur="1.2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg></div>
+		</div>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  	
+  	<!-- awal elemen sampul -->
+    <div id="sampul" class="no-scroll vh-100 text-light">
+    	<div class="w-100 h-100 d-flex flex-column">
+    		<div class="h-50 cover"></div>
+    		<div class="cover d-flex flex-column align-items-center h-50">
+    			<p class="text-longgar text-uppercase" data-aos="zoom-in">THE WEDDING OF</p>
+    			<h1 id="mempelai" class="cormorant bigger text-capitalize" data-aos="zoom-in">[nama kedua mempelai]</h1>
+    			<div class="my-4 text-center">
+    				<p class="m-0">Kepada Yth:</p>
+    				<h4 id="tamu" class="mt-1 text-capitalize"></h4>
+    				<p>Di Tempat</p>
+    			</div>
+    			<a id="buka" class="btn btn-sm btn-light shadow zoom" href="#isi"><i class="mx-1 fa-solid fa-envelope"></i> Buka Undangan</a>
+    		</div>
+    	</div>
+    </div>
+    <!-- akhir elemen sampul -->
+    
+    <!-- awal konten isi undangan -->
+  <div id="isi">
+  	<!-- navigasi -->
+  	<nav class="navmenu">
+  		<a class="btn px-0" href="#intro"><i class="fa-regular fa-house-chimney-heart"></i></a>
+  		<a class="btn px-0" href="#info-mempelai"><i class="fa-regular fa-rings-wedding"></i></a>
+  		<a class="btn px-0" href="#event"><i class="fa-regular fa-calendar-heart"></i></a>
+  		<a class="btn px-0" href="#galeri"><i class="fa-regular fa-images"></i></a>
+  		<a class="btn px-0" href="#cerita"><i class="fa-regular fa-heart"></i></a>
+  		<a class="btn px-0" href="#hadiah"><i class="fa-regular fa-gift"></i></a>
+  		<a class="btn px-0" href="#rsvp"><i class="fa-regular fa-pen-to-square"></i></a>
+  	</nav>
+  	
+		<!-- audio-controls -->
+		<div id="audio-controls" class="audio-controls">
+  		<button id="audio-button" class="audio-button">
+    		<i id="audio-icon" class="fa-solid fa-volume-up"></i>
+  		</button>
+  		<audio id="audio" src="../dist/audio.mp3" preload="auto"></audio>
+		</div>
+		
+		<!-- fullscreen-button -->
+		<div id="fullscreen-controls" class="fullscreen-controls">
+  		<button id="fullscreen-button" class="fullscreen-button">
+    		<i id="fullscreen-icon" class="fa-solid fa-expand"></i>
+  		</button>
+		</div>
+
+    <!-- intro -->
+    <div id="intro" class="vh-100 text-light cover position-relative">
+    	<div class="h-50 d-flex flex-column justify-content-end align-items-center">
+    		<p class="text-longgar text-uppercase" data-aos="zoom-in">THE WEDDING OF</p>
+    		<h1 id="mempelai2" class="cormorant bigger text-capitalize" data-aos="zoom-in">[nama kedua mempelai]</h1>
+    		<p class="mt-2" data-aos="zoom-in"><span id="tanggalIntro">[tanggal]</span> <span class="mx-2">.</span> <span id="bulanIntro">[bulan]</span> <span class="mx-2">.</span> <span id="tahunIntro">[tahun]</span></p>
+    	</div>
+    	<div class="h-50 py-5 text-center">
+    		<h2 class="mt-5 swipe-up"><i class="fa-solid fa-chevrons-up"></i></h2>
+    	</div>
+    	<div class="divider-bottom dividerbg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="currentColor"><path d="M500 80.7C358 68 0 4 0 4V0h1000v84.7c-216 23.3-358 8.6-500-4Z" opacity=".3"></path><path d="M500 65.7C358 53 0 4 0 4V0h1000v62.7c-216 23.3-358 15.6-500 3Z" opacity=".5"></path><path d="M500 50.7C358 38 0 4 0 4V0h1000v40.7C784 64 642 63.3 500 50.7Z"></path></svg></div>
+    </div>
+    <!-- intro end -->
+    
+    <!-- ayat -->
+    <div id="ayat" class="bg py-5 px-4 text-center">
+      <div class="row d-flex position-relative big-size text-utama cormorant text-uppercase my-3" data-aos="zoom-in">
+        <div id="inisialPria" class="col-6 text-end px-4">[inisial pria]</div>
+        <div id="inisialWanita" class="col-6 text-start px-4">[inisial wanita]</div>
+        <div class="position-absolute start-50 translate-middle-x">|</div>
+      </div>
+  			<div class="d-flex flex-column align-items-center shadow p-4 mx-2 rounded-5 utama text-light" data-aos="fade-in">
+  				<img class="w-25 my-4" src="../dist/images/design/tulip.svg" alt="" />
+  				<p class="line-height fs-5 text-center mx-3" dir="rtl" lang="ar" data-aos="zoom-in">
+  				    وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً 
+  				    إِنَّ فِي ذَلِكَ لَآيَاتٍ لِقَوْمٍ يَتَفَكَّرُونَ
+  				</p>
+  				<p class="mt-5 mx-2 text-justify" data-aos="zoom-in">"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir." 
+  				</p>
+  				<p class="text-center text-justify" data-aos="zoom-in">(Q.S Ar-Rum: 21)</p>
+  		</div> 
+    </div>
+    <!-- ayat end -->
+    
+    <!-- info mempelai -->
+    <div id="info-mempelai" class="py-5 px-4 bg">
+    	<div class="container text-center mb-4">
+    		<p class="subtitle stalemate" data-aos="zoom-in">Wedding</p>
+    		<p class="title text-utama bona" data-aos="zoom-in">Couple</p>
+    	</div>
+    	<p class="text-justify mx-2" data-aos="zoom-in">Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala, insyaaAllah kami akan menyelenggarakan acara pernikahan kami:</p>
+    	<!-- mempelai pria -->
+    	<div class="bg-light shadow text-center m-4 p-4">
+     		<img class="shadow w-100 mb-2" data-aos="zoom-in" src="../dist/images/pria.webp" alt="mempelai pria">
+    		<p class="mt-4 fs-3 text-uppercase" data-aos="zoom-in" id="mempelaiPria">[mempelai pria]</p>
+    		<hr class="tebal" data-aos="zoom-in" />
+    		<p data-aos="zoom-in">Putra dari Keluarga<br>Bapak <span id="ayahPria" class="text-capitalize">[ayah pria]</span> &amp; Ibu <span id="ibuPria" class="text-capitalize">[ibu pria]</span></p>
+    		<a id="linkIgPria" target="_blank" data-aos="zoom-in" class="btn btn-sm btn-utama shadow"><i class="mx-1 fa-brands fa-instagram"></i> <span id="igPria">[ig pria]</span></a>
+    	</div>
+    	
+    	<p data-aos="zoom-in" class="m-4 big-size text-center text-utama cormorant"><i class="fa-light fa-horizontal-rule"></i><i data-aos="slide-down" data-aos-delay="500" class="mx-2 fa-regular fa-heart-half-stroke"></i><i class="fa-light fa-horizontal-rule"></i></p>
+    	<!-- mempelai wanita -->
+    	<div class="bg-light shadow text-center m-4 p-4">
+     		<img class="shadow w-100 mb-2" data-aos="zoom-in" src="../dist/images/wanita.webp" alt="mempelai wanita">
+    		<p class="mt-4 fs-3 text-uppercase" data-aos="zoom-in" id="mempelaiWanita">[mempelai wanita]</p>
+    		<hr class="tebal" data-aos="zoom-in"/>
+    		<p data-aos="zoom-in">Putra dari Keluarga<br>Bapak <span id="ayahWanita" class="text-capitalize">[ayah wanita]</span> &amp; Ibu <span id="ibuWanita" class="text-capitalize">[ibu wanita]</span></p>
+    		<a id="linkIgWanita" target="_blank" class="btn btn-sm btn-utama shadow" data-aos="zoom-in"><i class="mx-1 fa-brands fa-instagram"></i> <span id="igWanita">[ig wanita]</span></a>
+    	</div> 
+    </div>
+    <!-- info mempelai end -->
+    
+    <!-- countdown -->
+    <div id="countdown" class="bg text-center px-3 py-5">
+    	<p class="subtitle stalemate" data-aos="zoom-in">Menuju Hari</p>
+    	<p class="title text-utama bona" data-aos="zoom-in">Bahagia</p>
+    	<div class="simply-countdown my-4" data-aos="zoom-in" id="mycountdown"></div>
+    	<script src="../dist/script/simplyCountdown.umd.js"></script>
+
+    	<a id="simpanTanggal" target="_blank" data-aos="zoom-in" class="btn btn-sm btn-utama shadow"><i class="mx-1 fa-solid fa-calendar-heart"></i> Simpan tanggal</a>
+    </div>
+    <!-- countdown end -->
+    
+    <!-- event -->
+    <div id="event" class="py-5 px-4 text-light cover position-relative">
+    	<div class="divider-top dividerbg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="currentColor"><path d="M500 80.7C358 68 0 4 0 4V0h1000v84.7c-216 23.3-358 8.6-500-4Z" opacity=".3"></path><path d="M500 65.7C358 53 0 4 0 4V0h1000v62.7c-216 23.3-358 15.6-500 3Z" opacity=".5"></path><path d="M500 50.7C358 38 0 4 0 4V0h1000v40.7C784 64 642 63.3 500 50.7Z"></path></svg></div>
+    	<div class="divider-bottom dividerutama"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="currentColor"><path d="M500 80.7C358 68 0 4 0 4V0h1000v84.7c-216 23.3-358 8.6-500-4Z" opacity=".3"></path><path d="M500 65.7C358 53 0 4 0 4V0h1000v62.7c-216 23.3-358 15.6-500 3Z" opacity=".5"></path><path d="M500 50.7C358 38 0 4 0 4V0h1000v40.7C784 64 642 63.3 500 50.7Z"></path></svg></div>
+    	<div class="container text-center my-4">
+    		<p class="subtitle stalemate" data-aos="zoom-in">Wedding</p>
+    		<p class="title bona" data-aos="zoom-in">Event</p>
+    	</div>
+    	<p class="text-justify mx-1 mb-4" data-aos="zoom-in">Dengan segala kerendahan hati kami berharap kehadiran Bapak/Ibu/Saudara/i dalam acara pernikahan kami yang akan diselenggarakan pada:</p>
+    	<!-- akad nikah -->
+    	<div id="akad" class="d-flex flex-column align-items-center m-4 p-3 double-border rounded-top-pill rounded-bottom-2">
+    		<img data-aos="zoom-in" class="mt-5 mb-3" style="width:18%" src="../dist/images/design/akad.png" alt="akad" />
+    		<p data-aos="zoom-in" class="big cormorant">Akad Nikah</p>
+    		<p data-aos="zoom-in" class="fs-4"><i class="fa-light fa-horizontal-rule"></i> <i class="fa-solid fa-calendar-heart"></i> <i class="fa-light fa-horizontal-rule"></i></p>
+    		<p id="hariAkad" data-aos="zoom-in" class="fs-5 text-capitalize">[hari akad]</p>
+    		<div id="tanggalAkad" class="purecounter" data-purecounter-start="0" data-purecounter-end="17" data-purecounter-duration="2">[tanggal akad]</div>
+    		<p data-aos="zoom-in" class="text-center">
+    			<span id="bulanAkad" class="text-capitalize">[bulan akad]</span> 
+    			<span id="tahunAkad">[tahun akad]</span><br/>
+    			<span id="jamAkad">[jam akad]</span> - Selesai</p>
+    		<p data-aos="zoom-in" class="fs-4"><i class="fa-light fa-horizontal-rule"></i> <i class="fa-solid fa-location-dot"></i> <i class="fa-light fa-horizontal-rule"></i></p>
+    		<p data-aos="zoom-in" class="text-center">Bertempat Di,<br/>
+    		<span id="lokasiAkad" class="text-capitalize">[lokasi akad]</span>
+    		<br/>
+    		<span id="detailLokasiAkad">[alamat akad]</span></p>
+    		<a id="linkAkad" target="_blank" data-aos="zoom-in" class="btn btn-sm btn-light shadow mb-4 px-3"><i class="mx-1 fa-solid fa-location-dot"></i> Lihat Lokasi</a>
+    	</div>
+    	<!-- resepsi -->
+    	<div id="resepsi" class="d-flex flex-column  align-items-center m-4 p-3 double-border rounded-top-2 rounded-bottom-pill">
+    		<img data-aos="zoom-in" class="mt-4 mb-3" style="width:15%" src="../dist/images/design/resepsi.png" alt="resepsi" />
+    		<p data-aos="zoom-in" class="big cormorant">Resepsi</p>
+    		<p data-aos="zoom-in" class="fs-4"><i class="fa-light fa-horizontal-rule"></i> <i class="fa-solid fa-calendar-heart"> <i class="fa-light fa-horizontal-rule"></i></i></p>
+    		<p id="hariResepsi" data-aos="zoom-in" class="fs-5 text-capitalize">[hari resepsi]</p>
+    		<div id="tanggalResepsi" class="purecounter" data-purecounter-start="0" data-purecounter-end="17" data-purecounter-duration="2">[tanggal resepsi]</div>
+    		<p data-aos="zoom-in" class="text-center">
+    			<span id="bulanResepsi" class="text-capitalize">[bulan resepsi]</span> 
+    			<span id="tahunResepsi">[tahun resepsi]</span><br/>
+    			<span id="jamResepsi">[jam resepsi]</span> - Selesai</p>
+    		<p data-aos="zoom-in" class="fs-4"><i class="fa-light fa-horizontal-rule"></i> <i class="fa-solid fa-location-dot"></i> <i class="fa-light fa-horizontal-rule"></i></p>
+    		<p data-aos="zoom-in" class="text-center">Bertempat Di,<br/>
+    		<span id="lokasiResepsi" class="text-capitalize">[lokasi resepsi]</span><br/>
+    		<span id="detailLokasiResepsi">[alamat resepsi]</span></p>
+    		<a id="linkResepsi" target="_blank" data-aos="zoom-in" class="btn btn-sm btn-light shadow mb-5 px-3"><i class="mx-1 fa-solid fa-location-dot"></i> Lihat Lokasi</a>
+    	</div>
+    	    <!-- streaming -->
+    	<div class="mx-4 my-5 p-3 d-flex flex-column align-items-center double-border rounded-4">
+    		<img data-aos="zoom-in" class="m-4" style="width:20%" src="../dist/images/design/streaming.png" alt="streaming" />
+    		<div class="text-center">
+    			<p data-aos="zoom-in" class="subtitle stalemate">live</p>
+  	  		<p data-aos="zoom-in" class="big bona">Streaming</p>
+	    	</div>
+	    	<p data-aos="zoom-in" class="text-justify mx-3">Bagi tamu undangan yang berhalangan hadir dan ingin menyaksikan acara pernikahan kami silahkan ikuti live streaming acara pernikahan kami dengan klik tombol di bawah.</p>
+	    	<a id="liveIg" target="_blank" data-aos="zoom-in" class="btn btn-sm btn-light shadow m-3 w-100"><i class="mx-1 fa-solid fa-brands fa-instagram"></i> Instagram Live</a>
+	    	<a id="liveTt" target="_blank" data-aos="zoom-in" class="btn btn-sm btn-light shadow w-100"><i class="mx-1 fa-brands fa-tiktok"></i> Tiktok Live</a>
+    	</div>
+    </div>
+    <!-- event end -->
+    <!-- galeri -->
+    <div id="galeri" class="py-5 px-4 utama text-light">
+    	<div class="container text-center mb-4">
+    		<p class="subtitle stalemate" data-aos="zoom-in">Our</p>
+    		<p class="title bona" data-aos="zoom-in" >Gallery</p>
+    	</div>
+    	<div class="grid">
+    		<div class="grid-sizer"></div>
+    		<div class="grid-item" data-aos="zoom-in" data-aos-delay="500">
+    			<img src="../dist/images/galeri/a.webp" alt=""></div>
+    		<div class="grid-item" data-aos="zoom-in" data-aos-delay="1000">
+    			<img src="../dist/images/galeri/b.webp" alt=""></div>
+    		<div class="grid-item" data-aos="zoom-in" data-aos-delay="1500">
+    			<img src="../dist/images/galeri/c.webp" alt=""></div>
+    		<div class="grid-item" data-aos="zoom-in" data-aos-delay="500">
+    			<img src="../dist/images/galeri/d.webp" alt=""></div>
+    		<div class="grid-item" data-aos="zoom-in" data-aos-delay="500">
+    			<img src="../dist/images/galeri/e.webp" alt=""></div>
+    		<div class="grid-item" data-aos="zoom-in" data-aos-delay="1000">
+    			<img src="../dist/images/galeri/f.webp" alt=""></div>
+    		<div class="grid-item" data-aos="zoom-in" data-aos-delay="1000">
+    			<img src="../dist/images/galeri/g.webp" alt=""></div>
+    		<div class="grid-item" data-aos="zoom-in" data-aos-delay="500">
+    			<img src="../dist/images/galeri/h.webp" alt=""></div>
+    	</div>
+    </div>
+
+    <!-- galeri end -->
+    <!-- love story -->
+    <div id="cerita" class="py-5 px-4 utama text-light">
+    	<div class="container text-center mb-4">
+    		<p class="subtitle stalemate" data-aos="zoom-in">Love</p>
+    		<p class="title bona" data-aos="zoom-in">Story</p>
+    		<p class="fs-4" data-aos="zoom-in"><i class="fa-light fa-horizontal-rule"></i> <i data-aos="slide-down" class="fa-regular fa-heart"></i> <i class="fa-light fa-horizontal-rule"></i></p>
+    	</div>
+    	<div class="bg-light rounded-3 shadow text-dark m-4 p-2" data-aos="zoom-in">
+     		<img data-aos="zoom-in" data-aos-delay="100" class="w-100 rounded-2 shadow" src="../dist/images/cerita/1.webp">
+    		<p id="judul1" data-aos="zoom-in" data-aos-delay="600" class="mt-2 mb-0 mx-3 text-danger-emphasis">[judul 1]</p>
+    		<p id="cerita1" data-aos="zoom-in" data-aos-delay="1200" class="mb-2 cilik">[cerita 1]</p>
+    	</div>
+    	
+    	<div class="bg-light rounded-3 shadow text-dark m-4 p-2" data-aos="zoom-in">
+    		<img data-aos="zoom-in" data-aos-delay="100" class="w-100 rounded-2 shadow" src="../dist/images/cerita/2.webp">
+    		<p id="judul2" data-aos="zoom-in" data-aos-delay="600" class="mt-2 mb-0 mx-3 text-danger-emphasis">[judul 2]</p>
+    		<p id="cerita2" data-aos="zoom-in" data-aos-delay="1200" class="mb-2 cilik">[cerita 2]</p>
+			</div>
+
+			<div class="bg-light rounded-3 shadow text-dark m-4 p-2" data-aos="zoom-in">
+    		<img data-aos="zoom-in" data-aos-delay="100" class="w-100 rounded-2 shadow" src="../dist/images/cerita/3.webp">
+    		<p id="judul3" data-aos="zoom-in" data-aos-delay="600" class="mt-2 mb-0 mx-3 text-danger-emphasis">[judul 3]</p>
+    		<p id="cerita3" data-aos="zoom-in" data-aos-delay="1200" class="mb-2 cilik">[cerita 3]</p>
+			</div>
+
+			<div class="bg-light rounded-3 shadow text-dark m-4 p-2" data-aos="zoom-in">
+    		<img data-aos="zoom-in" data-aos-delay="100" class="w-100 rounded-2 shadow" src="../dist/images/cerita/4.webp">
+    		<p id="judul4" data-aos="zoom-in" data-aos-delay="600" class="mt-2 mb-0 mx-3 text-danger-emphasis">[judul 4]</p>
+    		<p id="cerita4" data-aos="zoom-in" data-aos-delay="1200" class="mb-2 cilik">[cerita 4]</p>
+			</div>
+    </div>
+    <!-- love story end -->
+    <!-- hadiah -->
+    <div id="hadiah" class="py-5 px-4 cover text-light position-relative">
+    	<div class="divider-top dividerutama"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="currentColor"><path d="M0 0v100l500-48 500 48V0H0z" opacity=".5"></path><path d="M0 0h1000v52H0z" opacity=".5"></path><path d="M0 0v4l500 48 500-48V0H0z" opacity=".5"></path><path d="M0 0v4l500 48 500-48V0H0z"></path></svg></div>
+    	<div class="divider-bottom dividerutama"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="currentColor"><path d="M0 0v100l500-48 500 48V0H0z" opacity=".5"></path><path d="M0 0h1000v52H0z" opacity=".5"></path><path d="M0 0v4l500 48 500-48V0H0z" opacity=".5"></path><path d="M0 0v4l500 48 500-48V0H0z"></path></svg></div>
+    	<div class="container text-center">
+    		<p class="subtitle stalemate" data-aos="zoom-in">Send</p>
+    		<p class="title bona" data-aos="zoom-in">Gift</p>
+  	  	<p data-aos="zoom-in" class="text-justify">Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado secara cashless.</p>
+  	  	<a data-aos="zoom-in" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas" class="btn btn-sm btn-light shadow"><i class="mx-1 fa-solid fa-wallet"></i> Kirim Hadiah</a>
+	    </div>
+			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+  			<div class="offcanvas-body utama">
+					<div class="row bg p-4 shadow mx-2 mb-4 rounded-3">
+    				<div class="col-6 ps-0" style="height:70px">
+        			<p id="atasNama1" class="mb-0 text-capitalize">[atas nama]</p>
+        			<p id="bankNo1">[nomor rekening]</p>
+    				</div>
+    				<div class="col-6 position-relative" style="height:70px">
+        			<img id="bank1name" src="../dist/images/bank/bca.png" class="w-75 position-absolute end-0">
+    				</div>
+    				<button class="btn btn-sm btn-outline-dark w-100" id="button1" onclick="copyContent('bankNo1', this)"><i class="mx-2 fa-regular fa-copy"></i> salin nomer rekening</button>
+					</div>
+
+					<div class="row bg p-4 shadow mx-2 mb-4 rounded-3">
+    				<div class="col-6 ps-0" style="height:70px">
+        			<p id="atasNama2" class="mb-0 text-capitalize">[atas nama]</p>
+        			<p id="bankNo2">[nomor rekening]</p>
+    				</div>
+    				<div class="col-6 position-relative" style="height:70px">
+        			<img id="bank2name" src="../dist/images/bank/mandiri.png" class="w-75 position-absolute end-0">
+    				</div>
+    				<button class="btn btn-sm btn-outline-dark w-100" id="button2" onclick="copyContent('bankNo2', this)"><i class="mx-2 fa-regular fa-copy"></i> salin nomer rekening</button>
+					</div>
+
+					<div class="bg p-4 mx-2 mb-4 shadow rounded-3 text-center">
+    				<i class="big-size mb-2 fa-regular fa-gift"></i>
+    				<p class="mb-0">Anda juga bisa mengirimkan kado fisik ke alamat berikut:</p>
+    				<p id="kado">[alamat pengiriman kado]</p>
+    				<button class="btn btn-sm btn-outline-dark w-100" id="button3" onclick="copyContent('kado', this)"><i class="mx-2 fa-regular fa-copy"></i> salin alamat</button>
+					</div>
+
+    			<div class="p-4 mx-2"><a class="shadow btn btn-sm btn-light w-100" data-bs-dismiss="offcanvas" aria-label="Close">Tutup</a></div>
+  			</div>
+			</div>
+    </div>
+    <!-- hadiah end -->
+    <!-- rsvp & doa -->
+    <div id="rsvp" class="py-5 px-4 utama text-light">
+    	<div class="container text-center">
+    		<p class="subtitle stalemate" data-aos="zoom-in">Let's</p>
+  	  	<p class="title bona" data-aos="zoom-in">Celebrate</p>
+  	  	<p data-aos="zoom-in" class="text-justify">Hari bahagia ini akan lebih lengkap dengan kehadiran dan doa tulus Anda. Yuk, isi RSVP berikut untuk mengonfirmasi kehadiran Anda!</p>
+	    </div>
+			<form id="rsvpForm" class="mt-4">
+  			<div data-aos="zoom-in" class="mb-3">
+    			<input type="text" class="form-control shadow" name="guestName" placeholder="Masukkan nama Anda" required>
+  			</div>
+  			<div data-aos="zoom-in" class="mb-3">
+    			<select class="form-select shadow" name="attendance" required>
+      			<option value="" selected disabled>Pilih Kehadiran</option>
+      			<option value="Akan Hadir">Akan Hadir</option>
+      			<option value="Tidak Akan Hadir">Tidak Bisa Hadir</option>
+      			<option value="Masih Ragu">Masih Ragu</option>
+    			</select>
+  			</div>
+  			<div data-aos="zoom-in" class="mb-3">
+    			<textarea class="form-control shadow" name="prayerMessage" rows="4" placeholder="Tulis ucapan dan doa Anda untuk kedua mempelai di sini" required></textarea>
+  			</div>
+  			<button data-aos="zoom-in" type="submit" class="btn btn-sm btn-light w-100 shadow"><i class="mx-2 fa-solid fa-paper-plane"></i> Kirim</button>
+			</form>
+			<div data-aos="zoom-in" id="ucapanCounter" class="text-center mt-4 fw-bold">Belum ada ucapan.</div>
+			<div data-aos="zoom-in" id="result" class="mt-3 p-2 rounded-3 shadow bg text-dark">
+    <!-- Placeholder ucapan dari tamu -->
+    		<div class="p-1">
+        		<div class="d-flex align-items-center mb-2">
+            	<i class="fas fa-user-circle text-primary-emphasis"></i>
+            	<h6 class="mb-0 mx-2 text-dark-emphasis">Adam &amp; Hawa</h6>
+            	<i class="fa-solid fa-file-circle-check text-success"></i>
+        		</div>
+        		<p>Selamat menempuh hidup baru! Semoga pernikahan ini menjadi awal kebahagiaan dan keberkahan yang tiada henti.</p>
+        		<small>23 Jan 2025, 10:45</small>
+        		<hr />
+    		</div>
+
+    <!-- Placeholder promosi dari KoleksiQyu -->
+    		<div class="p-1">
+        	<div class="d-flex align-items-center mb-2">
+            <i class="fa-solid fa-user-headset text-primary-emphasis"></i>
+            <h6 class="mb-0 mx-2 text-dark-emphasis">KoleksiQyu</h6>
+            <i class="fa-solid fa-badge-check text-info"></i>
+        	</div>
+        	<p>Ciptakan momen istimewa dengan undangan digital dari KoleksiQyu! Berbagai tema menarik dan fitur personalisasi siap membuat acara Anda lebih berkesan. Hubungi kami sekarang!</p>
+        	<small>Kunjungi: <a href="https://koleksiqyu.site" target="_blank">koleksiqyu.site</a></small>
+        	<hr />
+    		</div>
+			</div>
+    </div>
+    <!-- rsvp & doa end -->
+    
+    <div id="toast-container" class="position-fixed top-50 start-50 translate-middle-x p-3 text-light" style="z-index: 1055;"></div>
+    
+    <!-- closing statement -->
+    <div id="penutup" class="vh-100 pt-5 cover d-flex flex-column justify-content-end align-items-center text-center text-light position-relative">
+    	<div class="divider-top dividerutama"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="currentColor"><path d="M500 80.7C358 68 0 4 0 4V0h1000v84.7c-216 23.3-358 8.6-500-4Z" opacity=".3"></path><path d="M500 65.7C358 53 0 4 0 4V0h1000v62.7c-216 23.3-358 15.6-500 3Z" opacity=".5"></path><path d="M500 50.7C358 38 0 4 0 4V0h1000v40.7C784 64 642 63.3 500 50.7Z"></path></svg></div>
+    		<div class="position-relative pb-5">
+    			<p class="mb-4 mx-3" data-aos="zoom-in">Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do’a restu kepada Kami.</p>
+    			<p class="mb-4" data-aos="zoom-in">Kami yang berbahagia</p>
+    			<h1 id="mempelai3" class="bigger cormorant" data-aos="zoom-in">[nama kedua mempelai]</h1>
+    			<a href="#intro" id="back-to-top" class="swipe-up m-3 btn btn-outline-light rounded-circle"><i class="fa-solid fa-arrow-up"></i></a>
+    			<div class="divider-bottom dividerutama"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="currentColor"><path d="M500 80.7C358 68 0 4 0 4V0h1000v84.7c-216 23.3-358 8.6-500-4Z" opacity=".3"></path><path d="M500 65.7C358 53 0 4 0 4V0h1000v62.7c-216 23.3-358 15.6-500 3Z" opacity=".5"></path><path d="M500 50.7C358 38 0 4 0 4V0h1000v40.7C784 64 642 63.3 500 50.7Z"></path></svg></div>
+    		</div>
+    		<div class="utama w-100 pb-5" style="height:20%">
+    			<p class="mb-0 cormorant">Designed by:</p>
+    			<a href="https://koleksiqyu.site" target="_blank" class="fs-1 text-light cormorant text-decoration-none">koleksiqyu.site</a>
+    		</div>
+    </div>
+    <!-- closing statement end -->
+
+  </div>
+
+  	
+  	<script src="rsvp/ucapan.js"></script>
+  	<script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../dist/script/aos.js"></script>
+    <script src="../dist/script/purecounter_vanilla.js"></script>
+    <script src="../dist/cpanel.js"></script>
+    <script src="tamu/tamu.js"></script>
+    <script src="../dist/script/script.js"></script>
+  </body>
+</html>
