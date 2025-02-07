@@ -1,5 +1,61 @@
 [
     {
+        "nama": "Maroon Velvet",
+        "gambar": "\/spesial10\/spesial10.webp",
+        "url": "/spesial10/index.html",
+        "tag": "terbaru",
+        "kategori": "spesial"
+    },
+    {
+        "nama": "Monochrome",
+        "gambar": "\/spesial9\/spesial9.webp",
+        "url": "/spesial9/index.html",
+        "tag": "terbaru",
+        "kategori": "spesial"
+    },
+    {
+        "nama": "Sky Blue Pastel",
+        "gambar": "\/spesial8\/spesial8.webp",
+        "url": "/spesial8/index.html",
+        "tag": "terbaru",
+        "kategori": "spesial"
+    },
+    {
+        "nama": "Blush Peach",
+        "gambar": "\/spesial7\/spesial7.webp",
+        "url": "/spesial7/index.html",
+        "tag": "terbaru",
+        "kategori": "spesial"
+    },
+    {
+        "nama": "Pastel Lavender",
+        "gambar": "\/spesial6\/spesial6.webp",
+        "url": "/spesial6/index.html",
+        "tag": "terbaru",
+        "kategori": "spesial"
+    },
+    {
+        "nama": "Warm Beige",
+        "gambar": "\/spesial5\/spesial5.webp",
+        "url": "/spesial5/index.html",
+        "tag": "terbaru",
+        "kategori": "spesial"
+    },
+    {
+        "nama": "Toska Elegan",
+        "gambar": "\/spesial4\/spesial4.webp",
+        "url": "/spesial4/index.html",
+        "tag": "terbaru",
+        "kategori": "spesial"
+    },
+    {
+        "nama": "Midnight Blue",
+        "gambar": "\/spesial3\/spesial3.webp",
+        "url": "/spesial3/index.html",
+        "tag": "terbaru",
+        "kategori": "spesial"
+    },
+    {
         "nama": "Dusty Pink",
         "gambar": "\/spesial2\/spesial2.webp",
         "url": "/spesial2/index.html",
