@@ -1,5 +1,12 @@
 [
     {
+        "nama": "Dusty Pink",
+        "gambar": "\/spesial1\/preview.webp",
+        "url": "/spesial2/index.html",
+        "tag": "terbaru",
+        "kategori": "spesial"
+    },
+    {
         "nama": "Almond Green",
         "gambar": "\/spesial1\/preview.gif",
         "url": "/spesial1/index.html",
