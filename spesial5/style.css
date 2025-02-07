@@ -1,0 +1,394 @@
+/* Elegan Klasik */
+/*
+:root {
+  --utama: #A3A697; 
+  --bg: #F7F3F0; 
+  --gradient: linear-gradient(to right, #A3A697, #8C8F7E);
+}
+*/
+
+/* Dusty Pink */
+/*
+:root {
+  --utama: #d8a7b1;
+  --bg: #f8eded;
+  --gradient: linear-gradient(to right, #d8a7b1, #b5858e);
+}
+*/
+
+/* Midnight Blue Modern */
+/*
+:root {
+  --utama: #2F4A75; 
+  --bg: #E3EBF2;
+  --gradient: linear-gradient(to right, #2F4A75, #1E3A5F);
+}
+*/
+
+/* Toska Elegan */
+/*
+:root {
+  --utama: #4DB6B1;
+  --bg: #E5F5F4;
+  --gradient: linear-gradient(to right, #4DB6B1, #3D8C8A);
+}
+*/
+
+/* Warm Elegance / beige */
+
+:root {
+  --utama: #C89B6B;
+  --bg: #F9F1D4;
+  --gradient: linear-gradient(to right, #C89B6B, #B68A60);
+}
+
+
+/* pastel Lavender */
+/*
+:root {
+  --utama: #B39CD0; 
+  --bg: #F3E8FF;
+  --gradient: linear-gradient(to right, #B39CD0, #9F86C0);
+}
+*/
+
+/* Blush Peach */
+/*
+:root {
+  --utama: #E8A89E; 
+  --bg: #FCEEE6; 
+  --gradient: linear-gradient(to right, #E8A89E, #D88C7F);
+}
+*/
+
+/* sky blue pastel */
+/*
+:root {
+  --utama: #89CFF0; 
+  --bg: #E0F7FF;
+  --gradient: linear-gradient(to right, #89CFF0, #72B6E0);
+}
+*/
+
+/* monochrome */
+/*
+:root {
+  --utama: #6B6B6B; 
+  --bg: #E5E5E5;
+  --gradient: linear-gradient(to right, #6B6B6B, #4F4F4F);
+}
+*/
+
+/* maroon velvet */
+/*
+:root {
+  --utama: #732D38; 
+  --bg: #EDE0E0; 
+  --gradient: linear-gradient(to right, #732D38, #5E242C);
+}
+*/
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lora";
+}
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg);
+  /* change if the mask should have another color then white */
+  z-index: 9999;
+  /* makes sure it stays on top */
+}
+
+#status {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  margin: -50px 0 0 -50px;
+  /* is width and height divided by two */
+}
+.no-scroll {
+  overflow-y: hidden !important;
+}
+.divider-bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+.divider-top {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.dividerbg {
+  color: var(--bg);
+}
+.dividerutama {
+  color: var(--utama);
+}
+.cormorant {
+  font-family: 'Cormorant Upright';
+}
+.stalemate {
+  font-family: 'Stalemate';
+}
+.bona {
+  font-family: 'Bona Nova SC';
+}
+.utama {
+  background-color: var(--utama);
+}
+.bg {
+	background-color: var(--bg);
+}
+.text-utama {
+  color: var(--utama);
+}
+.btn-utama {
+  background-color: var(--utama);
+  color: var(--bg);
+}
+.btn-utama:hover:active {
+  background-color: var(--bg);
+  color: var(--utama);
+}
+.big-size {
+  font-size: 3.5rem;
+}
+.bigger {
+  font-size: 3rem;
+}
+.big {
+  font-size: 2.5rem;
+}
+.title {
+  font-size: 3.5rem;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+.subtitle {
+  font-size: 2.5rem;
+  margin-bottom: 0!important;
+  padding-bottom: 0!important;
+  line-height: 0.1;
+  position: relative;
+  z-index:2;
+}
+.text-longgar {
+	letter-spacing: 4px;
+}
+.text-justify {
+	text-align: justify;
+	font-size: 0.875rem;
+}
+.line-height {
+	line-height: 1.8;
+}
+.cilik {
+	font-size: 0.875rem;
+	margin-inline: 1rem;
+}
+.tebal {
+	height: 2px;
+	background-color: black;
+	border: none;
+}
+.purecounter {
+	width: 100px;
+	height: 50px;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-left : 3px solid white;
+	border-right : 3px solid white;
+}
+.double-border {
+	border: 6px double white;
+	backdrop-filter: blur(7px);
+	-webkit-backdrop-filter: blur(10px);
+}
+/* Animasi swipe up */
+.swipe-up {
+	position: relative; /* Untuk memungkinkan animasi bergerak relatif */
+	animation: swipeUp 1.5s infinite; /* Nama animasi dengan durasi dan pengulangan */
+}
+@keyframes swipeUp {
+    		0% {
+      	transform: translateY(-5px); /* Mulai sedikit di bawah */
+    		}
+    		50% {
+      	transform: translateY(10px); /* Bergerak ke atas */
+    		}
+    		100% {
+      	transform: translateY(-5px); /* Kembali ke posisi awal */
+    	}
+}
+  	
+#isi {
+	background-image: url('../dist/images/bg.webp');
+	background-size: auto 100vh;
+	background-position: center center;
+	background-attachment: fixed;
+}
+#sampul {
+	background-image: url(../dist/images/cover.webp);
+	background-size: auto 100vh;
+	background-position: center center;
+	position: relative;
+	z-index: 999;
+}
+.cover {
+	background-color: rgba(0,0,0,0.6);
+}
+#result {
+	height: 300px; /* Maksimum tinggi kontainer */
+	overflow-y: auto; /* Scroll hanya muncul pada sumbu vertikal */
+	border: 5px double var(--utama);
+}
+#result p {
+	font-size: 0.875rem;
+	margin-bottom: 0;
+	margin-left: 1.5rem;
+}
+#result small {
+	font-size: 0.75rem;
+	margin-left: 1.5rem;
+}
+/* clear fix */
+.grid:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+	width: 50%;
+}
+.grid-item {
+	float: left;
+}
+.grid-item img {
+	display: block;
+	max-width: 100%;
+}
+.navmenu {
+	position: fixed;
+	bottom: 20px; /* Jarak dari bawah */
+	left: 50%; /* Memposisikan di tengah secara horizontal */
+	transform: translateX(-50%); /* Menggeser separuh lebar untuk benar-benar di tengah */
+	display: flex;
+	text-align: center;
+	gap: 5px; /* Jarak antar elemen */
+	background: rgba(0, 0, 0, 0.4); /* Latar belakang semi-transparan */
+	border-radius: 30px; /* Membuat sudut melengkung */
+	padding: 5px 7px; /* Padding di dalam navbar */
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+	z-index: 99; /* Agar selalu terlihat di atas elemen lain */
+}
+.navmenu a {
+	text-decoration: none;
+	font-size: 16px; /* Ukuran font */
+	width: 40px;
+	height: 40px;
+	color: #333; /* Warna default */
+	background-color: #fff;
+	border-radius: 20px;
+	transition: color 0.3s; /* Animasi pada hover */
+}
+.navmenu a:hover,
+.navmenu a.active {
+	color: #fff; /* Warna aktif atau saat hover */
+	background-color: rgba(0,0,0,0.5);
+}
+.audio-controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	bottom: 75px; /* Jarak dari bawah */
+	left: 20px; /* Jarak dari kiri */
+	background: rgba(0,0,0,0.5); /* Latar belakang semi-transparan */
+	border-radius: 50%; /* Membuat tombol berbentuk lingkaran */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan */
+	z-index: 99; /* Agar berada di atas elemen lain */
+}
+.audio-button {
+	border: none;
+	background: none;
+	font-size: 16px; /* Ukuran ikon */
+	color: #fff; /* Gunakan warna utama */
+	cursor: pointer;
+	outline: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.audio-button:active {
+	transform: scale(0.9); /* Animasi kecil saat ditekan */
+}
+.fullscreen-controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	bottom: 125px; /* Jarak dari bawah */
+	left: 20px; /* Jarak dari kiri */
+	background: rgba(0,0,0,0.5); /* Latar belakang semi-transparan */
+	border-radius: 50%; /* Membuat tombol berbentuk lingkaran */
+	padding: 5px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan */
+	z-index: 99; /* Agar berada di atas elemen lain */
+}
+.fullscreen-button {
+	border: none;
+	background: none;
+	font-size: 16px; /* Ukuran ikon */
+	color: #fff; /* Warna tombol sesuai dengan tema */
+	cursor: pointer;
+	outline: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fullscreen-button:active {
+	transform: scale(0.9); /* Animasi kecil saat ditekan */
+}
+@media (min-width: 601px) {
+  body {
+    max-width: 480px;
+    margin: 0 auto;
+    background: var(--gradient);
+  }
+  .audio-controls {
+  	bottom: 90px;
+  	left: 50%;
+  	transform: translateX(-50%);
+  }
+  .fullscreen-controls {
+  	display: none;
+  }
+}  
